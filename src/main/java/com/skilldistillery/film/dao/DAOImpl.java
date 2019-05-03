@@ -63,7 +63,7 @@ public class DAOImpl {
 			stmt.setString(1, film.getTitle());
 			stmt.setString(2, film.getDescription());
 			stmt.setInt(3, film.getReleaseYear());
-			stmt.setString(4, film.getLanguage());
+			stmt.setString(4,"1");
 			stmt.setString(5, film.getRentalDuration());
 			stmt.setDouble(6, film.getRentalRate());
 			stmt.setString(7, film.getLength());
