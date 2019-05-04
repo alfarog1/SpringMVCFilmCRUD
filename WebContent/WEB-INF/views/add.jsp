@@ -10,29 +10,50 @@
 </head>
 <body>
 	<div class="container">
-		<form action="createFilm.do" method="POST">
-			<label for="title">Title:</label><input type="text" name="filmId"><br />
-			<label for="title">Description:</label><input type="text" name="description"><br />
-			<label for="title">Release Year:</label><input type="text" name="relYear"><br />
-			<label for="title">Rental Duration (days):</label><input type="text" name="rDuration"><br />
-			<label for="title">Rental Rate:</label><input type="text" name="rRate"><br />
-			<label for="title">Film Length (min):</label><input type="text" name="length"><br />
-			<label for="title">Replacement Cost:</label><input type="text" name="rCost"><br />
-			<label for="title">Rating</label><br>
-			<input type="radio" name="rating" value="G"><input type="radio" name="rating" value="PG"><br />
-			<input type="radio" name="rating" value="PG13"><input type="radio" name="rating" value="R"><input type="radio" name="rating" value="NC17"><br />
-			<label for="title">Special Features</label><br>
-			<input type="checkbox" name="specFeat" value="Trailers">Trailers<br />
-			<input type="checkbox" name="specFeat" value="Commentaries">Commentaries<br />
-			<input type="checkbox" name="specFeat" value="Deleted Scenes">Deleted Scenes<br />
-			<input type="checkbox" name="specFeat" value="Behind the Scenes">Behind the Scenes<br />
+	<form:form action="createFilm.do" method="POST" modelAttribute="film">
+        <form:label path="title">Title:</form:label>
+        <form:input path="title" />
+        <form:errors path="title" />
+        <br />
+        <form:label path="description">Description:</form:label>
+        <form:input path="description" />
+        <form:errors path="description" />
+        <br />
+        <form:label path="releaseYear">Release Year:</form:label>
+        <form:input path="releaseYear" />
+        <form:errors path="releaseYear" />
+        <br />
+       
+        <form:label path="rentalDuration">Rental Duration:</form:label>
+        <form:input path="rentalDuration" />
+        <form:errors path="rentalDuration" />
+        <br />
+        <form:label path="rentalRate">Rental Rate:</form:label>
+        <form:input path="rentalRate" />
+        <form:errors path="rentalRate" />
+        <br />
+        <form:label path="length">Length:</form:label>
+        <form:input path="length" />
+        <form:errors path="length" />
+        <br />
+        <form:label path="replacementCost">Replacement Cost:</form:label>
+        <form:input path="replacementCost" />
+        <form:errors path="replacementCost" />
+        <br />
+        <form:label path="rating">Rating:</form:label>
+        <form:input path="rating" />
+        <form:errors path="rating" />
+        <br />
+        <form:label path="specitalFeatures">Special Features:</form:label>
+        <form:input path="specitalFeatures" />
+        <form:errors path="specitalFeatures" /><br>
+        <input type="submit" value="Add Film" />
+    </form:form>
+		
+		<c:if test="${! empty searchedFilm}">
+			<h3>${searchedFilm.title}</h3>
+			</c:if>
 			
-			
-			
-			
-			<input type="submit" value="addFilm">
-
-		</form>
 	</div>
 </body>
 </html>

@@ -17,6 +17,12 @@ public class Film {
 	private List<Actor> cast;
 	private List<Category> categories;
 
+	
+	
+	public Film() {
+		super();
+	}
+
 	public Film(int id, String title, String description, int releaseYear, String language, String rentalDuration,
 			double rentalRate, String length, double replacementCost, String rating, String specitalFeatures,
 			List<Actor> cast, List<Category> categories) {
