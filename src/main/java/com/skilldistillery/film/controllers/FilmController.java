@@ -118,7 +118,12 @@ public class FilmController {
 		mv.setViewName("result");
 		
 		if (films != null) {
-			mv.addObject("searchResults", films);
+			List<Film> filmsFound = new ArrayList<>();
+			for (Integer id : films) {
+				filmsFound.add(dao.findFilmById(id));
+			}
+			
+			mv.addObject("searchResults", filmsFound);
 		}
 		else {
 			mv.addObject("error", "Error encountered.  Your Film" + films + " was not found");
