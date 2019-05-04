@@ -40,14 +40,25 @@
         <form:input path="replacementCost" />
         <form:errors path="replacementCost" />
         <br />
-        <form:label path="rating">Rating:</form:label>
+      <%--   <form:label path="rating">Rating:</form:label>
         <form:input path="rating" />
         <form:errors path="rating" />
-        <br />
-        <form:label path="specitalFeatures">Special Features:</form:label>
+        <br /> --%>
+        <%-- <form:label path="specitalFeatures">Special Features:</form:label>
         <form:input path="specitalFeatures" />
         <form:errors path="specitalFeatures" /><br>
-        <input type="submit" value="Add Film" />
+        <input type="submit" value="Add Film" /> --%>
+        
+        <label for="title">Rating</label><br>
+            <input type="radio" name="rating" value="G"> G <input type="radio" name="rating" value="PG"> PG <br />
+            <input type="radio" name="rating" value="PG13"> PG-13 <input type="radio" name="rating" value="R"> R <input type="radio" name="rating" value="NC17"> NC-17 <br />
+            <label for="title">Special Features</label><br>
+            <input type="checkbox" name="specFeat" value="Trailers">Trailers<br />
+            <input type="checkbox" name="specFeat" value="Commentaries">Commentaries<br />
+            <input type="checkbox" name="specFeat" value="Deleted Scenes">Deleted Scenes<br />
+            <input type="checkbox" name="specFeat" value="Behind the Scenes">Behind the Scenes<br />
+        
+        
     </form:form>
 		
 		<c:if test="${! empty searchedFilm}">
