@@ -33,23 +33,23 @@
 				</c:forEach>
 				<br>
 
-				<form action="editFilm.do" method="GET">
-					<input type="hidden" name="filmId" value="${film.id}">
-					<input type="submit" value="Edit Film">
+				<form action="edit.do" method="GET">
+					<input type="hidden" name="filmId" value="${film.id}"> <input
+						type="submit" value="Edit Film">
 				</form>
 				<br>
 
 				<form action="deleteFilm.do" method="GET">
-					<input type="hidden" name="filmId" value="${film.id}">
-					<input	type="submit" value="Delete Film"}>
+					<input type="hidden" name="filmId" value="${film.id}"> <input
+						type="submit" value="Delete Film"}>
 				</form>
 			</c:when>
 			<c:when test="${! empty error}">
-			
-			<h2>Film not found...</h2>
-			
+
+				<h2>Film not found...</h2>
+
 			</c:when>
-			
+
 			<c:otherwise>
 				<c:forEach var="film" items="${searchResults }">
 					<br>
@@ -74,8 +74,9 @@
 					</c:forEach>
 					<br>
 
-					<form action="updateFilm.do" method="GET">
-						<input type="submit" value="Edit Film">
+					<form action="edit.do" method="GET">
+						<input type="hidden" name="filmId" value="${film.id}"> <input
+							type="submit" value="Edit Film">
 					</form>
 					<br>
 
