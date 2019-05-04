@@ -33,14 +33,15 @@
 				</c:forEach>
 				<br>
 
-				<form action="updateFilm.do" method="GET">
+				<form action="editFilm.do" method="GET">
+					<input type="hidden" name="filmId" value="${film.id}">
 					<input type="submit" value="Edit Film">
 				</form>
 				<br>
 
 				<form action="deleteFilm.do" method="GET">
-					<input type="hidden" name="filmId" value="${film.id}"> <input
-						type="submit" value="Delete Film"}>
+					<input type="hidden" name="filmId" value="${film.id}">
+					<input	type="submit" value="Delete Film"}>
 				</form>
 			</c:when>
 			<c:when test="${! empty error}">
