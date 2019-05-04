@@ -17,6 +17,12 @@ public class Film {
 	private List<Actor> cast;
 	private List<Category> categories;
 
+	
+	
+	public Film() {
+		super();
+	}
+
 	public Film(int id, String title, String description, int releaseYear, String language, String rentalDuration,
 			double rentalRate, String length, double replacementCost, String rating, String specitalFeatures,
 			List<Actor> cast, List<Category> categories) {
@@ -136,8 +142,11 @@ public class Film {
 		return specitalFeatures;
 	}
 
-	public void setSpecitalFeatures(String specitalFeatures) {
-		this.specitalFeatures = specitalFeatures;
+	public void setSpecitalFeatures(List<String> specitalFeatures) {
+		for (String string : specitalFeatures) {
+			this.specitalFeatures = string;			
+		}
+		
 	}
 
 	@Override
