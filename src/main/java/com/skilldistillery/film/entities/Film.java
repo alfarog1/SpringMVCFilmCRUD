@@ -2,13 +2,15 @@ package com.skilldistillery.film.entities;
 
 import java.util.List;
 
-import javax.validation.constraints.Size;
+
+
+
 
 public class Film {
 	private int id;
-	@Size(min=1, max=255)
 	private String title;
 	private String description;
+	
 	private int releaseYear;
 	private String language;
 	private String rentalDuration;
@@ -148,14 +150,12 @@ public class Film {
 	public void setSpecitalFeatures(List<String> sFeatList) {
 		String sFeatures = "";
 		for (int i = 0; i < sFeatList.size(); i++) {
-			System.out.println("in sFeat for loop");
 			if (i != 0 ) {
 				sFeatures = sFeatures + "," + sFeatList.get(i);			
 			} else {
 				sFeatures = sFeatList.get(i);
 			}
 		}
-		System.out.println("after sFeat for loop");
 		this.specitalFeatures = sFeatures;
 		
 	}

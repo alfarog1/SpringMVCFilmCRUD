@@ -59,9 +59,9 @@
 		</form:form>
 
 
-		<c:if test="${! empty searchedFilm}">
-			<h3>${searchedFilm.title}</h3>
-		</c:if>
+		<%-- <c:if test="${! empty film.id}">
+			<h3>Could not add film, try again.</h3>
+		</c:if> --%>
 
 	</div>
 </body>

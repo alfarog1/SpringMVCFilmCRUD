@@ -40,24 +40,22 @@
 			<form:input path="replacementCost" />
 			<form:errors path="replacementCost" />
 			<br />
-			<label for="title">Rating</label>
+		<!-- 	<label for="title">Rating</label>
 			<br>
 			<input type="radio" name="rating" value="G"> G <input
 				type="radio" name="rating" value="PG"> PG <br />
 			<input type="radio" name="rating" value="PG13"> PG-13 <input
 				type="radio" name="rating" value="R"> R <input type="radio"
-				name="rating" value="NC17"> NC-17 <br />
-			<label for="title">Special Features</label>
-			<br>
-			<input type="checkbox" name="specFeat" value="Trailers">Trailers<br />
-			<input type="checkbox" name="specFeat" value="Commentaries">Commentaries<br />
-			<input type="checkbox" name="specFeat" value="Deleted Scenes">Deleted Scenes<br />
-			<input type="checkbox" name="specFeat" value="Behind the Scenes">Behind the Scenes<br />
+				name="rating" value="NC17"> NC-17 <br /> -->
+		<!-- 	<label for="title">Special Features</label>
+			<br> -->
+			<!-- <input type="checkbox" name="specitalFeatures" value="Trailers">Trailers<br />
+			<input type="checkbox" name="specitalFeatures" value="Commentaries">Commentaries<br />
+			<input type="checkbox" name="specitalFeatures" value="Deleted Scenes">Deleted Scenes<br />
+			<input type="checkbox" name="specitalFeatures" value="Behind the Scenes">Behind the Scenes<br /> -->
 
-			<form action="createFilm.do" method="POST">
 
-				<input type="submit" value="Add Film">
-			</form>
+			<input type="submit" value="Edit Film">
 
 		</form:form>
 

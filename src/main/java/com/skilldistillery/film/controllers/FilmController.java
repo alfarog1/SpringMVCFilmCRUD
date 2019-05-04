@@ -73,11 +73,11 @@ public class FilmController {
 
 		returnedFilm = dao.createFilm(film);
 
-		if (film != null) {
+		if (film.getId() != 0) {
 			mv.addObject("returnedFilm" + returnedFilm);
 
 		} else {
-			mv.addObject("error", "Error encountered.  Your Film" + returnedFilm + " was not added");
+			mv.addObject("error", "Error encountered.  Your Film was not added");
 		}
 
 		mv.setViewName("result");
@@ -105,8 +105,8 @@ public class FilmController {
 		return mv;
 	}
 	
-	@RequestMapping("updateFilm.do")
-	public ModelAndView updateFilm(@RequestParam("film")Film film) {
+	@RequestMapping(path = "updateFilm.do" , method=RequestMethod.POST)
+	public ModelAndView updateFilm(@ModelAttribute("film")Film film) {
 		ModelAndView mv = new ModelAndView();
 		Film updatedFilm;
 		

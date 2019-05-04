@@ -12,6 +12,9 @@
 
 	<div>
 		<c:choose>
+			<c:when test="${! empty error}">
+				<h3>Could not add film, try again.</h3>
+			</c:when>
 			<c:when test="${! empty film}">
 				<h3>${film.title}</h3>
 
@@ -89,7 +92,6 @@
 
 				</c:forEach>
 				<br>
-
 
 			</c:otherwise>
 		</c:choose>
