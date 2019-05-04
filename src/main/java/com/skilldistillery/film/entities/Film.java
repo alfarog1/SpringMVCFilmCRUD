@@ -136,8 +136,11 @@ public class Film {
 		return specitalFeatures;
 	}
 
-	public void setSpecitalFeatures(String specitalFeatures) {
-		this.specitalFeatures = specitalFeatures;
+	public void setSpecitalFeatures(List<String> specitalFeatures) {
+		for (String string : specitalFeatures) {
+			this.specitalFeatures = string;			
+		}
+		
 	}
 
 	@Override
