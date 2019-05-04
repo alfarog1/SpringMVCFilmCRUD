@@ -29,7 +29,7 @@ On the other hand, if you search for a title by keyword, the program will return
 - C.R.U.D Functionality
 
 ## Entity Relationship Diagram
-![ER Diagram](https://github.com/alfarog1/SpringMVCFilmCRUD/blob/master/FilmSiteERDiagram.png)
+![ERD](https://github.com/alfarog1/SpringMVCFilmCRUD/blob/master/FilmSiteERDiagram.png)
 
 ## Lessons Learned
 - Using Data Accessor Objects to connect to persistent data
