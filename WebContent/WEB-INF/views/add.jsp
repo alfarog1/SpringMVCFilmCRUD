@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Edit Film</title>
+<title>Add Film</title>
 </head>
 <body>
 
