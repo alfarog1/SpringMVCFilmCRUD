@@ -4,7 +4,7 @@
 This program implements full-stack web-based C.R.U.D functionality, using Spring MVC and the DAO pattern.  
 
 ## Program Purpose
-The purpose of the program is to mimic a video rental companies database.  You can search, add, edit, or delete movies into the database.  The program incorporates both front and back-end elements.  For example, you can add a new movie to the database, print it out, and then you can also delete it.  
+The purpose of the program is to mimic a video rental company's database.  You can search, add, edit, or delete movies into the database.  The program incorporates both front and back-end elements.  For example, you can add a new movie to the database, print it out, and then you can also delete it.  
 
 ## Installation
 The first requirement is to obtain a copy of the database from Github/SkillDistillery/SD20.  The project incorporates Gradle as well as Spring, so both of those most be installed in your IDE in order to run the program successfully.   
@@ -20,23 +20,29 @@ If you search by ID, for example, if you input the number 421, it will return th
 On the other hand, if you search for a title by keyword, the program will return all of the films with that keyword in the title.  For example, if you type the word "Good" into the search bar, the resulta will be "GOODFELLAS SALUTE", and "GOODFELLAS SALUTE".
 
 ## Concepts/Technologies Used
-- Built in Spring Tool Suite (STS)
+- Built in Spring Tool Suite (STS/Eclipse)
 - Java
 - Gradle
 - MySQL
-- Spring
-- MVC Framework
+- Spring MVC Framework
 - C.R.U.D Functionality
+- MAMP (MacOS, Apache, MySQL, PHP/Python/Perl(Not used))
+- HTML
+- MySQL WorkBench
+- Atom
+- Bash Terminal
 
-## Entity Relationship Diagram
+## Entity Relationship Diagram (MySQL)
 ![ERD](https://github.com/alfarog1/SpringMVCFilmCRUD/blob/master/FilmSiteERDiagram.png)
 
 ## Lessons Learned
 - Using Data Accessor Objects to connect to persistent data
-- Reinforced OO principles
+- Reinforced Object Oriented Programming  principles
 - Using controllers and connecting them to Java Server Pages (JSP)
 - Working with XML files
-- Working with GIT branches
+- Working with GIT branches (pushing and pulling)
+- Working with POJO's
+- Working with RequestMapping and Autowiring.
 
 ## Contributing
 

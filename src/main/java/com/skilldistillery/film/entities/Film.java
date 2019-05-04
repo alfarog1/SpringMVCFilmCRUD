@@ -142,10 +142,16 @@ public class Film {
 		return specitalFeatures;
 	}
 
-	public void setSpecitalFeatures(List<String> specitalFeatures) {
-		for (String string : specitalFeatures) {
-			this.specitalFeatures = string;			
+	public void setSpecitalFeatures(List<String> sFeatList) {
+		String sFeatures = "";
+		for (int i = 0; i < sFeatList.size(); i++) {
+			if (i != 0 ) {
+				sFeatures = sFeatures + "," + sFeatList.get(i);			
+			} else {
+				sFeatures = sFeatList.get(i);
+			}
 		}
+		this.specitalFeatures = sFeatures;
 		
 	}
 
