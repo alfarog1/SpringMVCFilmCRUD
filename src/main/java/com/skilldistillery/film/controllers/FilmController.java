@@ -105,8 +105,13 @@ public class FilmController {
 		return mv;
 	}
 	
+<<<<<<< HEAD
 	@RequestMapping(path = "updateFilm.do" , method=RequestMethod.POST)
 	public ModelAndView updateFilm(@ModelAttribute("film")Film film) {
+=======
+	@RequestMapping(path = "updateFilm.do", method=RequestMethod.POST)
+	public ModelAndView updateFilm(@RequestParam("film")Film film) {
+>>>>>>> b08c77cd29231eb7c5de35ed99735eb20b9b1332
 		ModelAndView mv = new ModelAndView();
 		Film updatedFilm;
 		
