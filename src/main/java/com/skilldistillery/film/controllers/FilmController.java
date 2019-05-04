@@ -32,6 +32,16 @@ public class FilmController {
 		mv.setViewName("add");
 		return mv;
 	}
+	
+	@RequestMapping("edit.do")
+	public ModelAndView editFilm(int filmId) {
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("film", dao.findFilmById(filmId));
+		mv.setViewName("edit");
+		return mv;
+	}
+	
+	
 
 	@RequestMapping("findFilmId.do")
 	public ModelAndView findFilmById(@RequestParam("filmId") int filmId) {
