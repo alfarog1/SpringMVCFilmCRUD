@@ -15,7 +15,9 @@
 			<a href="edit.jsp" class="btn btn-primary" role="button">Edit Film</a>
 		</p>
 		<p>
-			<a href="home.jsp" class="btn btn-secondary" role="button">Back to Home</a>
+<form action="home.do" method="GET">
+			<input type="submit" value="Home">
+		</form>		
 		</p>
 </div>
 
