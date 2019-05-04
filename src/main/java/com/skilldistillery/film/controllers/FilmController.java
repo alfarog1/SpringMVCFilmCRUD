@@ -22,6 +22,11 @@ public class FilmController {
 	public String index() {
 		return "home";
 	}
+	
+	@RequestMapping("add.do")
+	public String addFilm() {
+		return "add";
+	}
 
 	@RequestMapping("findFilmId.do")
 	public ModelAndView findFilmById(@RequestParam("filmId") int filmId) {
