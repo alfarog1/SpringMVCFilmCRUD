@@ -5,17 +5,17 @@
 	version="3.1">
 	<display-name>MVCFilmSite</display-name>
 	<welcome-file-list>
-		<welcome-file>index.html</welcome-file>
+		<welcome-file>home.jsp</welcome-file>
 	</welcome-file-list>
 
-<!-- 	<servlet>
-		<servlet-name></servlet-name>
+ 	<servlet>
+		<servlet-name>film</servlet-name>
 		<servlet-class></servlet-class>
 	</servlet>
 
 	<servlet-mapping>
-		<servlet-name></servlet-name>
-		<url-pattern></url-pattern>
+		<servlet-name>film</servlet-name>
+		<url-pattern>*.do</url-pattern>
 	</servlet-mapping>
- -->
+ 
 </web-app>
