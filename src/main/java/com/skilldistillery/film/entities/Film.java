@@ -2,8 +2,11 @@ package com.skilldistillery.film.entities;
 
 import java.util.List;
 
+import javax.validation.constraints.Size;
+
 public class Film {
 	private int id;
+	@Size(min=1, max=255)
 	private String title;
 	private String description;
 	private int releaseYear;
