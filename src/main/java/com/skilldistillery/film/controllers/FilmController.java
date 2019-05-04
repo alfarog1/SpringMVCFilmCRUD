@@ -113,6 +113,7 @@ public class FilmController {
 		
 		if (film != null) {
 			updatedFilm = dao.updateFilm(film);
+//			dao.updateFilm(film);
 			mv.addObject("filmUpdated", updatedFilm);
 		}
 		else {
@@ -120,6 +121,7 @@ public class FilmController {
 		}
 		mv.setViewName("result");
 		
+		System.out.println(film.getReleaseYear() + " FC ");
 		return mv;
 	}
 	

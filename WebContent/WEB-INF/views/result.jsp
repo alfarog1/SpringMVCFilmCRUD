@@ -61,7 +61,9 @@
 
 					<p>
 						Released on: ${film.releaseYear} <br> Rated: ${film.rating} <br>
-						<c:if test="${! empty film.language}">Language: ${film.language} <br> </c:if> Duration: ${film.length}<br>
+						<c:if test="${! empty film.language}">Language: ${film.language} <br>
+						</c:if>
+						Duration: ${film.length}<br>
 					</p>
 
 					<p>${film.description}</p>
@@ -88,8 +90,6 @@
 							type="submit" value="Delete Film"}>
 					</form>
 
-
-
 				</c:forEach>
 				<br>
 
@@ -97,15 +97,7 @@
 		</c:choose>
 	</div>
 
-
-
-
-
-
-
 	<div>
-
-
 
 		<form action="home.do" method="GET">
 			<input type="submit" value="Home">

@@ -117,6 +117,8 @@ public class DAOImpl {
 			stmt.setString(10, film.getSpecitalFeatures());
 			stmt.setInt(11, film.getId());
 			int updateCount = stmt.executeUpdate();
+			System.out.println("In DAO IMp");
+			System.out.println(film.getReleaseYear());
 			if (updateCount == 1) {
 				ResultSet keys = stmt.getGeneratedKeys();
 				if (keys.next()) {
