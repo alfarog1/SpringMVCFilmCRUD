@@ -54,11 +54,8 @@
 			<input type="checkbox" name="specitalFeatures" value="Commentaries">Commentaries<br />
 			<input type="checkbox" name="specitalFeatures" value="Deleted Scenes">Deleted Scenes<br />
 			<input type="checkbox" name="specitalFeatures" value="Behind the Scenes">Behind the Scenes<br />
-			<form:checkboxes items = "${specitalFeatures}" path = "specitalFeatures"/>
-			<form action="createFilm.do" method="POST">
 
 				<input type="submit" value="Add Film">
-			</form>
 		</form:form>
 
 
