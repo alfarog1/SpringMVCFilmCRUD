@@ -20,7 +20,7 @@ public class FilmController {
 
 	@RequestMapping("home.do")
 	public String index() {
-		return "home.jsp";
+		return "home";
 	}
 
 	@RequestMapping("findFilmId.do")
@@ -31,7 +31,7 @@ public class FilmController {
 		film = dao.findFilmById(filmId);
 
 		mv.addObject("film", film);
-		mv.setViewName("result.jsp");
+		mv.setViewName("result");
 
 		return mv;
 	}
@@ -50,7 +50,7 @@ public class FilmController {
 			mv.addObject("error", "Error encountered.  Your Film" + returnedFilm + " was not added");
 		}
 
-		mv.setViewName("result.jsp");
+		mv.setViewName("result");
 
 		return mv;
 	}
@@ -70,7 +70,7 @@ public class FilmController {
 		else {
 			mv.addObject("error", "Error encountered.  Film not deleted");
 		}
-		mv.setViewName("result.jsp");
+		mv.setViewName("result");
 		
 		return mv;
 	}
@@ -88,7 +88,7 @@ public class FilmController {
 		else {
 			mv.addObject("error", "Error encountered.  Film not updated");
 		}
-		mv.setViewName("result.jsp");
+		mv.setViewName("result");
 		
 		return mv;
 	}
@@ -100,7 +100,7 @@ public class FilmController {
 		
 		films = dao.searchFilm(keyword);
 		mv.addObject("searchResults", films);
-		mv.setViewName("result.jsp");
+		mv.setViewName("result");
 		
 		return mv;
 	}
