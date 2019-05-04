@@ -9,10 +9,12 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
 import com.skilldistillery.film.entities.Actor;
 import com.skilldistillery.film.entities.Category;
 import com.skilldistillery.film.entities.Film;
-
+@Component
 public class DAOImpl {
 
 

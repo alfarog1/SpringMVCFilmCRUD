@@ -28,10 +28,23 @@ public class FilmController {
 		ModelAndView mv = new ModelAndView();
 		Film film = null;
 
+		
 		film = dao.findFilmById(filmId);
+<<<<<<< HEAD
 
 		mv.addObject("film", film);
 		mv.setViewName("result");
+=======
+		
+		if (film != null) {
+			mv.addObject("film", film);
+		}
+		else {
+			mv.addObject("error", "Error encountered.  Your Film" + film + " was not found");
+		}
+		
+		mv.setViewName("result.jsp");
+>>>>>>> ba7c2fa877e773ce1a506b00e2aa7739d575e2b9
 
 		return mv;
 	}
@@ -99,11 +112,25 @@ public class FilmController {
 		List<Integer> films = new ArrayList<>();
 		
 		films = dao.searchFilm(keyword);
+<<<<<<< HEAD
 		mv.addObject("searchResults", films);
 		mv.setViewName("result");
+=======
+		
+		if (films != null) {
+			mv.addObject("searchResults", films);
+		}
+		else {
+			mv.addObject("error", "Error encountered.  Your Film" + films + " was not found");
+		}
+		
+		mv.setViewName("result.jsp");
+>>>>>>> ba7c2fa877e773ce1a506b00e2aa7739d575e2b9
 		
 		return mv;
 	}
+	
+	
 	
 
 }
