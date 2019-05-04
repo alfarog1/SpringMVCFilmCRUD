@@ -4,9 +4,20 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Film</title>
 </head>
 <body>
+
+
+
+<div>
+<p>
+			<a href="edit.jsp" class="btn btn-primary" role="button">Edit Film</a>
+		</p>
+		<p>
+			<a href="home.jsp" class="btn btn-secondary" role="button">Back to Home</a>
+		</p>
+</div>
 
 </body>
 </html>
