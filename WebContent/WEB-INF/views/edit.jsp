@@ -32,7 +32,7 @@
 			<form:input path="rentalRate" />
 			<form:errors path="rentalRate" />
 			<br />
-			<form:label path="length">Length:</form:label>
+			<form:label path="length">Length (Minutes):</form:label>
 			<form:input path="length" />
 			<form:errors path="length" />
 			<br />
