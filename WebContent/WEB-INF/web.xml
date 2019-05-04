@@ -9,12 +9,12 @@
 	</welcome-file-list>
 
  	<servlet>
-		<servlet-name>film</servlet-name>
+		<servlet-name>FilmApp</servlet-name>
 		<servlet-class></servlet-class>
 	</servlet>
 
 	<servlet-mapping>
-		<servlet-name>film</servlet-name>
+		<servlet-name>FilmApp</servlet-name>
 		<url-pattern>*.do</url-pattern>
 	</servlet-mapping>
  
