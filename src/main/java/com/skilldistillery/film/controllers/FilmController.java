@@ -1,5 +1,8 @@
 package com.skilldistillery.film.controllers;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,46 +17,93 @@ public class FilmController {
 
 	@Autowired
 	private DAOImpl dao;
-	
+
 	@RequestMapping("home.do")
 	public String index() {
 		return "home.jsp";
 	}
-	
+
 	@RequestMapping("findFilmId.do")
-	public ModelAndView findFilmById(@RequestParam("getFilm")int filmId) {
+	public ModelAndView findFilmById(@RequestParam("filmId") int filmId) {
 		ModelAndView mv = new ModelAndView();
 		Film film = null;
-		
+
 		film = dao.findFilmById(filmId);
-		
+
 		mv.addObject("film", film);
 		mv.setViewName("result.jsp");
-		
-		return mv;	
+
+		return mv;
 	}
-	
-	public ModelAndView createFilm(Film film) {
+
+	@RequestMapping("createFilm.do")
+	public ModelAndView createFilm(@RequestParam("film")Film film) {
 		ModelAndView mv = new ModelAndView();
 		Film returnedFilm;
-		
+
 		returnedFilm = dao.createFilm(film);
-		
+
 		if (film != null) {
-		mv.addObject("returnedFilm" + returnedFilm);
+			mv.addObject("returnedFilm" + returnedFilm);
+
+		} else {
+			mv.addObject("error", "Error encountered.  Your Film" + returnedFilm + " was not added");
+		}
+
+		mv.setViewName("result.jsp");
+
+		return mv;
+	}
+
+	@RequestMapping("deleteFilm.do")
+	public ModelAndView deleteFilm(@RequestParam("filmId")int id) {
+		ModelAndView mv = new ModelAndView();
+		boolean filmDeleted;
 		
+		Film toBeDeleted = dao.findFilmById(id);
+		
+		
+		if (toBeDeleted != null) {
+			filmDeleted = dao.deleteFilm(toBeDeleted);
+			mv.addObject("filmDeleted", "Your film id: " + id + " was deleted" );
 		}
 		else {
-			mv.addObject("Error", "Error encountered.  Film not added");
+			mv.addObject("error", "Error encountered.  Film not deleted");
 		}
-		
 		mv.setViewName("result.jsp");
 		
 		return mv;
 	}
 	
+	@RequestMapping("updateFilm.do")
+	public ModelAndView updateFilm(@RequestParam("film")Film film) {
+		ModelAndView mv = new ModelAndView();
+		Film updatedFilm;
+		
+		
+		if (film != null) {
+			updatedFilm = dao.updateFilm(film);
+			mv.addObject("filmUpdated", updatedFilm);
+		}
+		else {
+			mv.addObject("error", "Error encountered.  Film not updated");
+		}
+		mv.setViewName("result.jsp");
+		
+		return mv;
+	}
 	
+	@RequestMapping("searchFilm.do")
+	public ModelAndView searchFilm(@RequestParam("searchTerm")String keyword) {
+		ModelAndView mv = new ModelAndView();
+		List<Integer> films = new ArrayList<>();
+		
+		films = dao.searchFilm(keyword);
+		mv.addObject("searchResults", films);
+		mv.setViewName("result.jsp");
+		
+		return mv;
+	}
 	
-	
-}
 
+}

@@ -138,7 +138,7 @@ public class DAOImpl {
 		return film;
 	}
 
-	public ArrayList<Integer> searchFilm(String searchTerm, DAO db) {
+	public ArrayList<Integer> searchFilm(String searchTerm) {
 		String sql = "SELECT film.id FROM film WHERE (film.title LIKE ? OR film.description LIKE ?)";
 		try (Connection conn = DriverManager.getConnection(URL, USER, PWD);
 				PreparedStatement pst = conn.prepareStatement(sql);) {
