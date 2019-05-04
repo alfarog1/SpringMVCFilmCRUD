@@ -11,6 +11,8 @@
 <body>
 
 <div>
+		<c:forEach var = "film" items = "${searchResults }"> * ${film } <br>
+
 <h3>${film.title}</h3>
 
 		<p>
@@ -33,7 +35,7 @@
 		
 		
 	
-
+</c:forEach><br>
 
 </div>
 
