@@ -40,14 +40,6 @@
 			<form:input path="replacementCost" />
 			<form:errors path="replacementCost" />
 			<br />
-			<%--   <form:label path="rating">Rating:</form:label>
-        <form:input path="rating" />
-        <form:errors path="rating" />
-        <br /> --%>
-			<%-- <form:label path="specitalFeatures">Special Features:</form:label>
-        <form:input path="specitalFeatures" />
-        <form:errors path="specitalFeatures" /><br>
-        <input type="submit" value="Add Film" /> --%>
 
 			<label for="title">Rating</label>
 			<br>
@@ -58,17 +50,16 @@
 				name="rating" value="NC17"> NC-17 <br />
 			<label for="title">Special Features</label>
 			<br>
-			<input type="checkbox" name="specFeat" value="Trailers">Trailers<br />
-			<input type="checkbox" name="specFeat" value="Commentaries">Commentaries<br />
-			<input type="checkbox" name="specFeat" value="Deleted Scenes">Deleted Scenes<br />
-			<input type="checkbox" name="specFeat" value="Behind the Scenes">Behind the Scenes<br />
+			<input type="checkbox" name="specitalFeature" value="Trailers">Trailers<br />
+			<input type="checkbox" name="specitalFeature" value="Commentaries">Commentaries<br />
+			<input type="checkbox" name="specitalFeature" value="Deleted Scenes">Deleted Scenes<br />
+			<input type="checkbox" name="specitalFeature" value="Behind the Scenes">Behind the Scenes<br />
 
 			<form action="createFilm.do" method="POST">
 
 				<input type="submit" value="Add Film">
 			</form>
 		</form:form>
-
 
 
 		<c:if test="${! empty searchedFilm}">
