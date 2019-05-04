@@ -28,9 +28,16 @@ public class FilmController {
 		ModelAndView mv = new ModelAndView();
 		Film film = null;
 
+		
 		film = dao.findFilmById(filmId);
-
-		mv.addObject("film", film);
+		
+		if (film != null) {
+			mv.addObject("film", film);
+		}
+		else {
+			mv.addObject("error", "Error encountered.  Your Film" + film + " was not found");
+		}
+		
 		mv.setViewName("result.jsp");
 
 		return mv;
@@ -99,11 +106,20 @@ public class FilmController {
 		List<Integer> films = new ArrayList<>();
 		
 		films = dao.searchFilm(keyword);
-		mv.addObject("searchResults", films);
+		
+		if (films != null) {
+			mv.addObject("searchResults", films);
+		}
+		else {
+			mv.addObject("error", "Error encountered.  Your Film" + films + " was not found");
+		}
+		
 		mv.setViewName("result.jsp");
 		
 		return mv;
 	}
+	
+	
 	
 
 }
