@@ -13,7 +13,7 @@
 	<div>
 		<c:choose>
 			<c:when test="${! empty error}">
-				<h3>Could not add film, try again.</h3>
+				<h3>Could not perform action, try again.</h3>
 			</c:when>
 			<c:when test="${! empty film}">
 				<h3>${film.title}</h3>
@@ -61,7 +61,7 @@
 
 					<p>
 						Released on: ${film.releaseYear} <br> Rated: ${film.rating} <br>
-						Language: ${film.language} <br> Duration: ${film.length}<br>
+						<c:if test="${! empty film.language}">Language: ${film.language} <br> </c:if> Duration: ${film.length}<br>
 					</p>
 
 					<p>${film.description}</p>
