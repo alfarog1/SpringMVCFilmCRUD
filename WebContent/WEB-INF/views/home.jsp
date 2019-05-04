@@ -20,8 +20,8 @@
 			<input type="submit" value="Find by Keywords">
 		</form>
 
-		<form action="createFilm.do" method="POST">
-			<label for="film">Add Film:</label><input type="text" name="film"><br />
+		<form action="add.do" method="GET">
+		<!-- 	<label for="film">Add Film:</label><input type="text" name="film"><br /> -->
 			<input type="submit" value="Add Film">
 
 		</form>

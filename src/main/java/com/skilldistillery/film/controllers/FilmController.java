@@ -5,7 +5,9 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -24,8 +26,11 @@ public class FilmController {
 	}
 	
 	@RequestMapping("add.do")
-	public String addFilm() {
-		return "add";
+	public ModelAndView addFilm() {
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("film", new Film());
+		mv.setViewName("add");
+		return mv;
 	}
 
 	@RequestMapping("findFilmId.do")
@@ -43,7 +48,7 @@ public class FilmController {
 			mv.addObject("film", film);
 		}
 		else {
-			mv.addObject("error", "Error encountered.  Your Film" + film + " was not found");
+			mv.addObject("error", "Error encountered.  Your Film was not found");
 		}
 		
 		mv.setViewName("result");
@@ -51,8 +56,8 @@ public class FilmController {
 		return mv;
 	}
 
-	@RequestMapping("createFilm.do")
-	public ModelAndView createFilm(@RequestParam("film")Film film) {
+	@RequestMapping(path = "createFilm.do", method=RequestMethod.POST)
+	public ModelAndView createFilm(@ModelAttribute("film")Film film) {
 		ModelAndView mv = new ModelAndView();
 		Film returnedFilm;
 
