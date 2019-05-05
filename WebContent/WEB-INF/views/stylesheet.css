@@ -1,14 +1,14 @@
 @charset "UTF-8";
 
 .header {
-	background-image: url = "https://github.com/alfarog1/SpringMVCFilmCRUD/blob/master/WebContent/logo.png";
+	background-image: url = "https://raw.githubusercontent.com/alfarog1/SpringMVCFilmCRUD/master/WebContent/WEB-INF/lib/header-bg.jpg";
 	height: 70px;
 	width: 110%;
 	margin: -10px;
 }
 
 body {
-  background-color: #f2f2f2;
+  background-color: black;
   font-family: 'EB Garamond', serif;
   font-weight: 300;
   font-size: 16px;
@@ -76,7 +76,7 @@ hr {
    ========================================================================== */
 
 #headerwrap {
-  background: url(../img/header-bg.jpg) no-repeat center top;
+  background: url(https://raw.githubusercontent.com/alfarog1/SpringMVCFilmCRUD/master/WebContent/WEB-INF/lib/header-bg.jpg) no-repeat center top;
   margin-top: -10px;
   padding-top: 20px;
   text-align: center;

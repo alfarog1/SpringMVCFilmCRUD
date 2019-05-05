@@ -25,26 +25,22 @@
 </head>
 
 <body>
-<!--Nav bar   -->
-<!-- <div class="topnav">
-  <a class="active" href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#contact">Contact</a>
-  <input type="text" placeholder="Search..">
-</div> -->
-
- <div class="header">
-	 </div>
 
 
-
-
-
-
-
-
-
-	<div class="container">
+  <!-- ========== HEADER SECTION ========== -->
+  <section id="home" name="home"></section>
+  <div id="headerwrap">
+    <div class="container">
+      <div class="logo">
+        <img src="https://raw.githubusercontent.com/alfarog1/SpringMVCFilmCRUD/master/WebContent/WEB-INF/lib/logo.png" width="35%" height="35%">
+      </div>
+      <br>
+      <div class="row">
+              <h1>IMDB - SD</h1>
+        <br>
+        <h3>Let's watch a movie...</h3>
+        <br>
+        	<div class="container">
 	
 
 	
@@ -64,6 +60,41 @@
 
 		</form>
 	</div>
+        <br>
+        <div id="f"></div>
+        <div class="col-lg-6 col-lg-offset-3">
+        </div>
+      </div>
+    </div>
+    <!-- /container -->
+  </div>
+  <!-- /headerwrap -->
+
+
+
+
+
+
+<!--Nav bar   -->
+<!-- <div class="topnav">
+  <a class="active" href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+  <input type="text" placeholder="Search..">
+</div> -->
+
+ <div class="header">
+	 </div>
+
+
+
+
+
+
+
+
+
+
 
 
 
