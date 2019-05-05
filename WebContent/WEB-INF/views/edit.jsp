@@ -22,7 +22,6 @@
 			<form:input path="title" />
 			<form:errors path="title" />
 			<br />
-
 			<br />
 			<form:label path="description">Description:</form:label>
 			<form:input path="description" />
@@ -49,10 +48,7 @@
 			<form:input path="replacementCost" />
 			<form:errors path="replacementCost" />
 			<br />
-			
-
 			<input type="submit" value="Save Changes">
-
 		</form:form>
 
 	</div>

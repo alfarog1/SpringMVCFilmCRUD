@@ -88,7 +88,6 @@ public class FilmController {
 	public ModelAndView deleteFilm(@RequestParam("filmId")int id) {
 		ModelAndView mv = new ModelAndView();
 		boolean filmDeleted;
-		System.out.println("Id: " + id);
 		Film toBeDeleted = dao.findFilmById(id);
 		
 		

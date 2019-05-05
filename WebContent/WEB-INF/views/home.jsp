@@ -42,8 +42,6 @@
         <br>
         	<div class="container">
 	
-
-	
 		<form action="findFilmId.do" method="GET">
 			<label for="filmId">Film by ID:</label><input type="text" name="filmId" placeholder= "Search by ID..."><br />
 			<input type="submit" value="Find by ID">
