@@ -15,14 +15,14 @@
 			<c:when test="${! empty error }">
 				<h3>Could not perform action, try again.</h3>
 			</c:when>
-		
+
 			<c:when test="${! empty film}">
 				<h3>${film.title}</h3>
 
 				<p>
-					Id: ${film.id }<br>
-					Released on: ${film.releaseYear} <br> Rated: ${film.rating} <br>
-					Language: ${film.language} <br> Duration: ${film.length}<br>
+					Id: ${film.id }<br> Released on: ${film.releaseYear} <br>
+					Rated: ${film.rating} <br> Language: ${film.language} <br>
+					Duration: ${film.length}<br>
 				</p>
 
 				<p>${film.description}</p>
@@ -44,8 +44,12 @@
 				<br>
 
 				<form action="deleteFilm.do" method="GET">
+				<form:input path="id" type="hidden" />
 					<input type="hidden" name="filmId" value="${film.id}"> <input
 						type="submit" value="Delete Film"}>
+				</form>
+				<form action="home.do" method="GET">
+					<input type="submit" value="Home">
 				</form>
 			</c:when>
 			<c:when test="${! empty error}">
@@ -60,13 +64,14 @@
 
 					<h3>${film.title}</h3>
 
-					<p>Id: ${film.id }<br>
-						Released on: ${film.releaseYear} <br> Rated: ${film.rating} <br>
-						
+					<p>
+						Id: ${film.id }<br> Released on: ${film.releaseYear} <br>
+						Rated: ${film.rating} <br>
+
 						<c:if test="${! empty film.language}">Language: ${film.language} <br>
 						</c:if>
-						
-					
+
+
 						Duration: ${film.length}<br>
 					</p>
 
@@ -93,6 +98,9 @@
 						<input type="hidden" name="filmId" value="${film.id}"> <input
 							type="submit" value="Delete Film">
 					</form>
+					<form action="home.do" method="GET">
+						<input type="submit" value="Home">
+					</form>
 
 				</c:forEach>
 				<br>
@@ -101,13 +109,7 @@
 		</c:choose>
 	</div>
 
-	<div>
-
-		<form action="home.do" method="GET">
-			<input type="submit" value="Home">
-		</form>
-
-	</div>
+	<div></div>
 
 </body>
 </html>

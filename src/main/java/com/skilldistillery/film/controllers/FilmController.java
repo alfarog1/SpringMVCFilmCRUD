@@ -42,7 +42,6 @@ public class FilmController {
 	}
 	
 	
-
 	@RequestMapping("findFilmId.do")
 	public ModelAndView findFilmById(@RequestParam("filmId") int filmId) {
 		ModelAndView mv = new ModelAndView();
@@ -89,13 +88,19 @@ public class FilmController {
 	public ModelAndView deleteFilm(@RequestParam("filmId")int id) {
 		ModelAndView mv = new ModelAndView();
 		boolean filmDeleted;
-		
+		System.out.println("Id: " + id);
 		Film toBeDeleted = dao.findFilmById(id);
 		
 		
 		if (toBeDeleted != null) {
 			filmDeleted = dao.deleteFilm(toBeDeleted);
+			if (filmDeleted) {
 			mv.addObject("filmDeleted", "Your film id: " + id + " was deleted" );
+			}else {			
+				mv.addObject("error", "Error encountered.  Film not deleted");
+				mv.setViewName("notDeleted");
+				return mv;
+			}
 		}
 		else {
 			mv.addObject("error", "Error encountered.  Film not deleted");

@@ -11,8 +11,8 @@
 <body>
 	<div class="container">
 		<form:form action="updateFilm.do" method="POST" modelAttribute="film">
-			<form:label path="id">Id: <c:out value="${id}"/>${film.id }</form:label>
-			<form:input path="id" type="hidden" />
+			<form:label path="id">Id: ${film.id }</form:label>
+			<form:input path="id" type="hidden"/>
 			<form:errors path="id" />
 			<br />
 			<form:label path="title">Title:</form:label>
@@ -49,21 +49,6 @@
 			<form:errors path="replacementCost" />
 			<br />
 			
-			
-		<!-- 	<label for="title">Rating</label>
-			<br>
-			<input type="radio" name="rating" value="G"> G <input
-				type="radio" name="rating" value="PG"> PG <br />
-			<input type="radio" name="rating" value="PG13"> PG-13 <input
-				type="radio" name="rating" value="R"> R <input type="radio"
-				name="rating" value="NC17"> NC-17 <br /> -->
-			<!-- 	<label for="title">Special Features</label>
-			<br> -->
-			<!-- <input type="checkbox" name="specitalFeatures" value="Trailers">Trailers<br />
-			<input type="checkbox" name="specitalFeatures" value="Commentaries">Commentaries<br />
-			<input type="checkbox" name="specitalFeatures" value="Deleted Scenes">Deleted Scenes<br />
-			<input type="checkbox" name="specitalFeatures" value="Behind the Scenes">Behind the Scenes<br /> -->
-
 
 			<input type="submit" value="Save Changes">
 

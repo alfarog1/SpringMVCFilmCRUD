@@ -39,10 +39,13 @@ public class DAOImpl {
 			String sql = "DELETE FROM film WHERE id = ?";
 			PreparedStatement stmt = conn.prepareStatement(sql);
 			stmt.setInt(1, film.getId());
+			System.out.println(" DAO stmt" + stmt);
 			int updateCount = stmt.executeUpdate();
+			System.out.println("DAO updatecnt: " + updateCount);
 			conn.commit(); // COMMIT TRANSACTION
 		} catch (SQLException sqle) {
-			sqle.printStackTrace();
+//			sqle.printStackTrace();
+			
 			if (conn != null) {
 				try {
 					conn.rollback();

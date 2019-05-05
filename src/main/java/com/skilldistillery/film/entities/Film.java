@@ -2,15 +2,10 @@ package com.skilldistillery.film.entities;
 
 import java.util.List;
 
-
-
-
-
 public class Film {
 	private int id;
 	private String title;
 	private String description;
-	
 	private int releaseYear;
 	private String language;
 	private String rentalDuration;
@@ -21,8 +16,6 @@ public class Film {
 	private String specitalFeatures;
 	private List<Actor> cast;
 	private List<Category> categories;
-
-	
 	
 	public Film() {
 		super();
