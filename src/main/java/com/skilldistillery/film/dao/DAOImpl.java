@@ -100,7 +100,6 @@ public class DAOImpl {
 
 	public Film updateFilm(Film film) {
 		Connection conn = null;
-		System.out.println(film.getId() + " imp");
 		try {
 			conn = DriverManager.getConnection(URL, USER, PWD);
 			conn.setAutoCommit(false); // START TRANSACTION
@@ -118,8 +117,6 @@ public class DAOImpl {
 			stmt.setString(10, film.getSpecitalFeatures());
 			stmt.setInt(11, film.getId());
 			int updateCount = stmt.executeUpdate();
-			System.out.println("In DAO IMp");
-			System.out.println(stmt);
 			if (updateCount == 1) {
 				ResultSet keys = stmt.getGeneratedKeys();
 				if (keys.next()) {

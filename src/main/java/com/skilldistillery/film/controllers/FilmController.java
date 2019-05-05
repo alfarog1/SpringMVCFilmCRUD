@@ -121,7 +121,6 @@ public class FilmController {
 		}
 		mv.setViewName("result");
 		
-		System.out.println(film.getReleaseYear() + " FC ");
 		return mv;
 	}
 	
