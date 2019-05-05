@@ -65,7 +65,7 @@
 			<input type="checkbox" name="specitalFeatures" value="Behind the Scenes">Behind the Scenes<br /> -->
 
 
-			<input type="submit" value="Edit Film">
+			<input type="submit" value="Save Changes">
 
 		</form:form>
 

@@ -20,6 +20,7 @@
 				<h3>${film.title}</h3>
 
 				<p>
+					Id: ${film.id }<br>
 					Released on: ${film.releaseYear} <br> Rated: ${film.rating} <br>
 					Language: ${film.language} <br> Duration: ${film.length}<br>
 				</p>
@@ -28,7 +29,6 @@
 		Rental Duration: ${film.rentalDuration} Rental Rate: ${film.rentalRate}
 		Replacement Cost: ${film.replacementCost}<br>
 		Special Features: ${film.specitalFeatures}
-		</p>
 
 				<c:forEach var="actor" items="${film.cast }"> * ${actor } <br>
 				</c:forEach>
@@ -60,7 +60,7 @@
 
 					<h3>${film.title}</h3>
 
-					<p>
+					<p>Id: ${film.id }<br>
 						Released on: ${film.releaseYear} <br> Rated: ${film.rating} <br>
 						
 						<c:if test="${! empty film.language}">Language: ${film.language} <br>
