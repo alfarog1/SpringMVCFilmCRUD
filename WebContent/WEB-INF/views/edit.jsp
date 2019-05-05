@@ -12,6 +12,7 @@
 	<div class="container">
 		<form:form action="updateFilm.do" method="POST" modelAttribute="film">
 			<form:label path="id">Id: <c:out value="${id}"/>${film.id }</form:label>
+			<form:input path="id" type="hidden" />
 			<form:errors path="id" />
 			<br />
 			<form:label path="title">Title:</form:label>

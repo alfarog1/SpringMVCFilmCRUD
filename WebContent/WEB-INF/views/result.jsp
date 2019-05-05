@@ -74,7 +74,7 @@
 		Rental Duration: ${film.rentalDuration} Rental Rate: ${film.rentalRate}
 		Replacement Cost: ${film.replacementCost}<br>
 		Special Features: ${film.specitalFeatures}
-		</p>
+		
 
 					<c:forEach var="actor" items="${film.cast }"> * ${actor } <br>
 					</c:forEach>
@@ -91,7 +91,7 @@
 
 					<form action="deleteFilm.do" method="GET">
 						<input type="hidden" name="filmId" value="${film.id}"> <input
-							type="submit" value="Delete Film"}>
+							type="submit" value="Delete Film">
 					</form>
 
 				</c:forEach>
