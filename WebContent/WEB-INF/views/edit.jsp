@@ -5,6 +5,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style type="text/css">
+  <%@include file="stylesheet.css" %>
+</style>
 <meta charset="UTF-8">
 <title>Edit Film</title>
 </head>

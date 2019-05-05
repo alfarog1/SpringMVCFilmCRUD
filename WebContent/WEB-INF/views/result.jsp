@@ -5,6 +5,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style type="text/css">
+  <%@include file="stylesheet.css" %>
+</style>
 <meta charset="UTF-8">
 <title>Film</title>
 </head>
@@ -46,10 +49,10 @@
 				<form action="deleteFilm.do" method="GET">
 					<input type="hidden" name="filmId" value="${film.id}"> <input
 						type="submit" value="Delete Film">
-				</form>
-				<form action="home.do" method="GET">
+			</form>
+				<%-- <form action="home.do" method="GET">
 					<input type="submit" value="Home">
-				</form>
+				</form>  --%>
 			</c:when>
 			<c:when test="${! empty error}">
 
@@ -96,10 +99,10 @@
 					<form action="deleteFilm.do" method="GET">
 						<input type="hidden" name="filmId" value="${film.id}"> <input
 							type="submit" value="Delete Film">
-					</form>
+				<%-- 	</form>
 					<form action="home.do" method="GET">
 						<input type="submit" value="Home">
-					</form>
+					</form> --%>
 
 				</c:forEach>
 				<br>
@@ -108,7 +111,12 @@
 		</c:choose>
 	</div>
 
-	<div></div>
+	<div>
+	<form action="home.do" method="GET">
+			<input type="submit" value="Home">
+		</form>
+	</div>
+	
 
 </body>
 </html>

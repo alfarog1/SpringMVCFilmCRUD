@@ -12,12 +12,19 @@
 
 	<context:component-scan
 		base-package="com.skilldistillery.film.controllers, com.skilldistillery.film.dao" />
-	<mvc:annotation-driven />
+	  <mvc:annotation-driven />
+	  <mvc:resources mapping="/lib/**" location="/WEB-INF/lib/"/>
 
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/views/" />
 		<property name="suffix" value=".jsp" />
+
+	 	<!-- <mvc:resources mapping="/WEB-INF/lib/**"
+			location="/, classpath:/WEB-INF/lib/" cache-period="10000" /> -->
+			<!-- <mvc:annotation-driven /> --> 
+			<!-- /MVCFilmSite/WebContent/WEB-INF/stylesheet.css -->
+			<!-- /MVCFilmSite/src/main/resources/stylesheet.css -->
 	</bean>
 
 </beans>
