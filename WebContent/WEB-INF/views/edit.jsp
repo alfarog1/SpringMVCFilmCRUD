@@ -2,7 +2,7 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+<!DOCTYPE html>`
 <html>
 <head>
 <meta charset="UTF-8">
@@ -11,8 +11,7 @@
 <body>
 	<div class="container">
 		<form:form action="updateFilm.do" method="POST" modelAttribute="film">
-			<form:label path="id">Id: </form:label>
-			<form:input path="id" disable="true" />
+			<form:label path="id">Id: <c:out value="${id}"/>${film.id }</form:label>
 			<form:errors path="id" />
 			<br />
 			<form:label path="title">Title:</form:label>
