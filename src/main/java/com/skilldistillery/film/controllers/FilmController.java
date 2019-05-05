@@ -100,7 +100,7 @@ public class FilmController {
 		else {
 			mv.addObject("error", "Error encountered.  Film not deleted");
 		}
-		mv.setViewName("result");
+		mv.setViewName("delete");
 		
 		return mv;
 	}

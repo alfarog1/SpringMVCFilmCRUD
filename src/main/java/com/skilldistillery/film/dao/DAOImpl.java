@@ -100,6 +100,7 @@ public class DAOImpl {
 
 	public Film updateFilm(Film film) {
 		Connection conn = null;
+		System.out.println(film.getId() + " imp");
 		try {
 			conn = DriverManager.getConnection(URL, USER, PWD);
 			conn.setAutoCommit(false); // START TRANSACTION
@@ -108,7 +109,7 @@ public class DAOImpl {
 			stmt.setString(1, film.getTitle());
 			stmt.setString(2, film.getDescription());
 			stmt.setInt(3, film.getReleaseYear());
-			stmt.setString(4, film.getLanguage());
+			stmt.setString(4, "1");
 			stmt.setString(5, film.getRentalDuration());
 			stmt.setDouble(6, film.getRentalRate());
 			stmt.setString(7, film.getLength());
@@ -118,7 +119,7 @@ public class DAOImpl {
 			stmt.setInt(11, film.getId());
 			int updateCount = stmt.executeUpdate();
 			System.out.println("In DAO IMp");
-			System.out.println(film.getReleaseYear());
+			System.out.println(stmt);
 			if (updateCount == 1) {
 				ResultSet keys = stmt.getGeneratedKeys();
 				if (keys.next()) {

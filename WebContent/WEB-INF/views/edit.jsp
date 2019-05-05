@@ -11,9 +11,17 @@
 <body>
 	<div class="container">
 		<form:form action="updateFilm.do" method="POST" modelAttribute="film">
+			<form:label path="id">Id: </form:label>
+			<form:input path="id" disable="true" />
+			<form:errors path="id" />
+			<br />
 			<form:label path="title">Title:</form:label>
 			<form:input path="title" />
 			<form:errors path="title" />
+			<br />
+
+
+
 			<br />
 			<form:label path="description">Description:</form:label>
 			<form:input path="description" />
@@ -40,6 +48,8 @@
 			<form:input path="replacementCost" />
 			<form:errors path="replacementCost" />
 			<br />
+			
+			
 		<!-- 	<label for="title">Rating</label>
 			<br>
 			<input type="radio" name="rating" value="G"> G <input
@@ -47,7 +57,7 @@
 			<input type="radio" name="rating" value="PG13"> PG-13 <input
 				type="radio" name="rating" value="R"> R <input type="radio"
 				name="rating" value="NC17"> NC-17 <br /> -->
-		<!-- 	<label for="title">Special Features</label>
+			<!-- 	<label for="title">Special Features</label>
 			<br> -->
 			<!-- <input type="checkbox" name="specitalFeatures" value="Trailers">Trailers<br />
 			<input type="checkbox" name="specitalFeatures" value="Commentaries">Commentaries<br />
