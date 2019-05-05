@@ -44,9 +44,8 @@
 				<br>
 
 				<form action="deleteFilm.do" method="GET">
-				<form:input path="id" type="hidden" />
 					<input type="hidden" name="filmId" value="${film.id}"> <input
-						type="submit" value="Delete Film"}>
+						type="submit" value="Delete Film">
 				</form>
 				<form action="home.do" method="GET">
 					<input type="submit" value="Home">

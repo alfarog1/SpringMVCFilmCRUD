@@ -2,7 +2,7 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html>`
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -19,8 +19,6 @@
 			<form:input path="title" />
 			<form:errors path="title" />
 			<br />
-
-
 
 			<br />
 			<form:label path="description">Description:</form:label>

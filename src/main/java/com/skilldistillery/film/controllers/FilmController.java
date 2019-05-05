@@ -110,7 +110,7 @@ public class FilmController {
 		return mv;
 	}
 	
-	@RequestMapping(path = "updateFilm.do" , method=RequestMethod.POST)
+	@RequestMapping(path = "updateFilm.do", method=RequestMethod.POST)
 	public ModelAndView updateFilm(@ModelAttribute("film")Film film) {
 		ModelAndView mv = new ModelAndView();
 		Film updatedFilm;
@@ -118,11 +118,10 @@ public class FilmController {
 		
 		if (film != null) {
 			updatedFilm = dao.updateFilm(film);
-//			dao.updateFilm(film);
-			mv.addObject("filmUpdated", updatedFilm);
+			mv.addObject("film", updatedFilm);
 		}
 		else {
-			mv.addObject("error", "Error encountered.  Film not updated");
+			mv.addObject("error", "Error encountered. Film not updated");
 		}
 		mv.setViewName("result");
 		
