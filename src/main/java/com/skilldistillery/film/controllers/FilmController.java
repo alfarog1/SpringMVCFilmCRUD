@@ -139,11 +139,15 @@ public class FilmController {
 			for (Integer id : films) {
 				filmsFound.add(dao.findFilmById(id));
 			}
+			if (filmsFound.size() == 0) {
+				mv.setViewName("filmNotFound");
+				return mv;
+			}
 			
 			mv.addObject("searchResults", filmsFound);
 		}
 		else {
-			mv.addObject("error", "Error encountered.  Your Film" + films + " was not found");
+			mv.addObject("error", "Error encountered.  Your Film was not found");
 		}
 		
 		mv.setViewName("result");
