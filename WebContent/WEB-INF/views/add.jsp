@@ -61,12 +61,9 @@
 
 				<input type="submit" value="Add Film">
 		</form:form>
-
-
-		<%-- <c:if test="${! empty film.id}">
-			<h3>Could not add film, try again.</h3>
-		</c:if> --%>
-
+				<form action="home.do" method="GET">
+			<input type="submit" value="Home">
+		</form>
 	</div>
 </body>
 </html>

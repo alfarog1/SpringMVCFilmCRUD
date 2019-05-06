@@ -12,7 +12,7 @@
 <title>Film</title>
 </head>
 <body>
-	<div>
+	<div class="all-field-text">
 		<c:choose>
 			<c:when test="${! empty error }">
 				<h3>Could not perform action, try again.</h3>
@@ -27,7 +27,7 @@
 					Duration (min): ${film.length}<br>
 				</p>
 
-				<p>${film.description}</p>
+				<p>Description: ${film.description}</p>
 					Rental Duration (days): ${film.rentalDuration} | Rental Rate: $${film.rentalRate} | 
 					Replacement Cost: $${film.replacementCost}<br>
 					Special Features: ${film.specitalFeatures}
@@ -76,7 +76,7 @@
 						Duration (min): ${film.length}<br>
 					</p>
 
-					<p>${film.description}</p>
+					<p>Description: ${film.description}</p>
 						Rental Duration (days): ${film.rentalDuration} | Rental Rate: $${film.rentalRate} | 
 						Replacement Cost: $${film.replacementCost}<br>
 						Special Features: ${film.specitalFeatures}

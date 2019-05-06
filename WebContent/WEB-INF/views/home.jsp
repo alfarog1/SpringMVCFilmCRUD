@@ -32,16 +32,13 @@
   <div id="headerwrap">
     <div class="container">
       <div class="logo">
-        <img src="https://raw.githubusercontent.com/alfarog1/SpringMVCFilmCRUD/master/WebContent/WEB-INF/lib/logo.png" width="35%" height="35%">
+        <img src="https://raw.githubusercontent.com/alfarog1/SpringMVCFilmCRUD/master/WebContent/WEB-INF/lib/logo.png" width="35%" height="25%">
       </div>
-      <br>
       <div class="row">
               <h1>IMDB - SD</h1>
-        <br>
         <h3>Let's watch a movie...</h3>
-        <br>
-        	<div class="container">
-	
+        	<!-- <div class="container"> -->
+	<div class="all-field-text">
 		<form action="findFilmId.do" method="GET">
 			<label for="filmId">Film by ID:</label><input type="text" name="filmId" placeholder= "Search by ID..."><br />
 			<input type="submit" value="Find by ID">
@@ -57,7 +54,8 @@
 			<input type="submit" value="Add Film">
 
 		</form>
-	</div>
+		</div>
+	<!-- </div> -->
         <br>
         <div id="f"></div>
         <div class="col-lg-6 col-lg-offset-3">

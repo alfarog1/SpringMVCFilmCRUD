@@ -50,6 +50,9 @@
 			<br />
 			<input type="submit" value="Save Changes">
 		</form:form>
+		<form action="home.do" method="GET">
+			<input type="submit" value="Home">
+		</form>
 
 	</div>
 </body>
