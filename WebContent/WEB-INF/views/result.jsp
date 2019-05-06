@@ -81,12 +81,14 @@
 						Replacement Cost: $${film.replacementCost}<br>
 						Special Features: ${film.specitalFeatures}
 		
-
+					<p>
+					Cast:<br>
 					<c:forEach var="actor" items="${film.cast }"> * ${actor } <br>
 					</c:forEach>
 					<br>
 					<c:forEach var="filmCategories" items="${film.categories }">  ${filmCategories.categoryName} <br>
 					</c:forEach>
+					</p>
 					<br>
 
 					<form action="edit.do" method="GET">
