@@ -87,6 +87,7 @@
 					<br>
 					<c:forEach var="filmCategories" items="${film.categories }">  ${filmCategories.categoryName} <br>
 					</c:forEach>
+					<hr>
 					<br>
 
 					<form action="edit.do" method="GET">
