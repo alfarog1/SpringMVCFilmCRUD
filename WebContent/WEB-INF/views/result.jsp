@@ -87,7 +87,6 @@
 					<br>
 					<c:forEach var="filmCategories" items="${film.categories }">  ${filmCategories.categoryName} <br>
 					</c:forEach>
-					<hr>
 					<br>
 
 					<form action="edit.do" method="GET">
@@ -100,6 +99,7 @@
 						<input type="hidden" name="filmId" value="${film.id}"> <input
 							type="submit" value="Delete Film">
 					</form>
+					<hr>
 					<%-- <form action="home.do" method="GET">
 						<input type="submit" value="Home">
 					</form> --%>
